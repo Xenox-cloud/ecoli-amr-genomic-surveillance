@@ -1,0 +1,12 @@
+project:
+  organism: "Escherichia coli"
+  development_genome_limit: 20
+  random_seed: 42
+
+quality:
+  minimum_total_length: 100
+  maximum_ambiguous_fraction: 0.10
+
+database:
+  path: "data/processed/surveillance.db"
+

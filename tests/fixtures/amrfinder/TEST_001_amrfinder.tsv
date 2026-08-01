@@ -1,0 +1,3 @@
+Protein identifier	Contig id	Start	Stop	Strand	Gene symbol	Sequence name	Scope	Element type	Element subtype	Class	Subclass	Method	Target length	Reference sequence length	% Coverage of reference sequence	% Identity to reference sequence	Alignment length	Accession of closest sequence	Name of closest sequence	HMM id	HMM description
+NA	contig_1	1	12	+	blaTEST	Synthetic beta-lactamase	core	AMR	AMR	BETA-LACTAM	BETA-LACTAM	EXACT	12	12	100.00	100.00	12	TEST0001	Synthetic test sequence	NA	NA
+

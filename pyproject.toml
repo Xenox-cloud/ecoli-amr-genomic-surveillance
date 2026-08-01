@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecoli-genomic-surveillance"
+version = "0.1.0"
+description = "Reproducible microbial genomics, AMR, and phylogenetic surveillance portfolio project"
+requires-python = ">=3.12"
+dependencies = [
+  "biopython==1.85",
+  "matplotlib==3.10.3",
+  "pandas==2.3.1",
+  "PyYAML==6.0.2",
+  "seaborn==0.13.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,198 @@
+﻿
+Convert an NCBI Datasets Genome Assembly Data Report (JSONL) to a tabular (TSV) format.
+
+For more details on how to generate tables and field descriptions, see https://www.ncbi.nlm.nih.gov/datasets/docs/v2/command-line-tools/using-dataformat/
+
+Usage
+  dataformat tsv genome [flags]
+
+Examples
+  dataformat tsv genome --inputfile human/ncbi_dataset/data/assembly_data_report.jsonl --fields accession,'organism*','*busco*'
+  dataformat tsv genome --package human.zip
+
+Flags
+      --fields strings     Comma-separated list of field names that supports wildcards (*). Names with wildcards must be quoted, for example: accession,'organism*','*busco*'
+                               - accession
+                               - ani-best-ani-match-ani
+                               - ani-best-ani-match-assembly
+                               - ani-best-ani-match-assembly_coverage
+                               - ani-best-ani-match-category
+                               - ani-best-ani-match-organism
+                               - ani-best-ani-match-type_assembly_coverage
+                               - ani-best-match-status
+                               - ani-category
+                               - ani-check-status
+                               - ani-comment
+                               - ani-submitted-ani-match-ani
+                               - ani-submitted-ani-match-assembly
+                               - ani-submitted-ani-match-assembly_coverage
+                               - ani-submitted-ani-match-category
+                               - ani-submitted-ani-match-organism
+                               - ani-submitted-ani-match-type_assembly_coverage
+                               - ani-submitted-organism
+                               - ani-submitted-species
+                               - annotinfo-busco-complete
+                               - annotinfo-busco-duplicated
+                               - annotinfo-busco-fragmented
+                               - annotinfo-busco-lineage
+                               - annotinfo-busco-missing
+                               - annotinfo-busco-singlecopy
+                               - annotinfo-busco-totalcount
+                               - annotinfo-busco-version
+                               - annotinfo-featcount-gene-non-coding
+                               - annotinfo-featcount-gene-other
+                               - annotinfo-featcount-gene-protein-coding
+                               - annotinfo-featcount-gene-pseudogene
+                               - annotinfo-featcount-gene-total
+                               - annotinfo-method
+                               - annotinfo-name
+                               - annotinfo-pipeline
+                               - annotinfo-provider
+                               - annotinfo-release-date
+                               - annotinfo-report-url
+                               - annotinfo-software-version
+                               - annotinfo-status
+                               - assminfo-assembly-method
+                               - assminfo-atypicalis-atypical
+                               - assminfo-atypicalwarnings
+                               - assminfo-bioproject
+                               - assminfo-bioproject-lineage-accession
+                               - assminfo-bioproject-lineage-parent-accessions
+                               - assminfo-bioproject-lineage-title
+                               - assminfo-biosample-accession
+                               - assminfo-biosample-age
+                               - assminfo-biosample-attribute-name
+                               - assminfo-biosample-attribute-value
+                               - assminfo-biosample-biomaterial-provider
+                               - assminfo-biosample-bioproject-accession
+                               - assminfo-biosample-bioproject-parent-accessions
+                               - assminfo-biosample-bioproject-title
+                               - assminfo-biosample-breed
+                               - assminfo-biosample-collected-by
+                               - assminfo-biosample-collection-date
+                               - assminfo-biosample-cultivar
+                               - assminfo-biosample-description-comment
+                               - assminfo-biosample-description-organism-common-name
+                               - assminfo-biosample-description-organism-infraspecific-breed
+                               - assminfo-biosample-description-organism-infraspecific-cultivar
+                               - assminfo-biosample-description-organism-infraspecific-ecotype
+                               - assminfo-biosample-description-organism-infraspecific-isolate
+                               - assminfo-biosample-description-organism-infraspecific-sex
+                               - assminfo-biosample-description-organism-infraspecific-strain
+                               - assminfo-biosample-description-organism-name
+                               - assminfo-biosample-description-organism-pangolin
+                               - assminfo-biosample-description-organism-tax-id
+                               - assminfo-biosample-description-title
+                               - assminfo-biosample-development-stage
+                               - assminfo-biosample-ecotype
+                               - assminfo-biosample-geo-loc-name
+                               - assminfo-biosample-host
+                               - assminfo-biosample-host-disease
+                               - assminfo-biosample-identified-by
+                               - assminfo-biosample-ids-db
+                               - assminfo-biosample-ids-label
+                               - assminfo-biosample-ids-value
+                               - assminfo-biosample-ifsac-category
+                               - assminfo-biosample-isolate
+                               - assminfo-biosample-isolate-name-alias
+                               - assminfo-biosample-isolation-source
+                               - assminfo-biosample-last-updated
+                               - assminfo-biosample-lat-lon
+                               - assminfo-biosample-models
+                               - assminfo-biosample-owner-contact-lab
+                               - assminfo-biosample-owner-name
+                               - assminfo-biosample-package
+                               - assminfo-biosample-project-name
+                               - assminfo-biosample-publication-date
+                               - assminfo-biosample-sample-name
+                               - assminfo-biosample-serotype
+                               - assminfo-biosample-serovar
+                               - assminfo-biosample-sex
+                               - assminfo-biosample-source-type
+                               - assminfo-biosample-status-status
+                               - assminfo-biosample-status-when
+                               - assminfo-biosample-strain
+                               - assminfo-biosample-sub-species
+                               - assminfo-biosample-submission-date
+                               - assminfo-biosample-tissue
+                               - assminfo-blast-url
+                               - assminfo-description
+                               - assminfo-diploid-role
+                               - assminfo-grouping-method
+                               - assminfo-level
+                               - assminfo-linked-assm-accession
+                               - assminfo-linked-assm-type
+                               - assminfo-long-name
+                               - assminfo-name
+                               - assminfo-notes
+                               - assminfo-paired-assm-accession
+                               - assminfo-paired-assm-changed
+                               - assminfo-paired-assm-diff
+                               - assminfo-paired-assm-manual-diff
+                               - assminfo-paired-assm-name
+                               - assminfo-paired-assm-only-genbank
+                               - assminfo-paired-assm-only-refseq
+                               - assminfo-paired-assm-refseq-genbank-are-different
+                               - assminfo-paired-assm-status
+                               - assminfo-refseq-category
+                               - assminfo-release-date
+                               - assminfo-sequencing-tech
+                               - assminfo-status
+                               - assminfo-submitter
+                               - assminfo-suppression-reason
+                               - assminfo-synonym
+                               - assminfo-type
+                               - assmstats-atgc-count
+                               - assmstats-contig-l50
+                               - assmstats-contig-n50
+                               - assmstats-gaps-between-scaffolds-count
+                               - assmstats-gc-percent
+                               - assmstats-genome-coverage
+                               - assmstats-number-of-component-sequences
+                               - assmstats-number-of-contigs
+                               - assmstats-number-of-organelles
+                               - assmstats-number-of-scaffolds
+                               - assmstats-scaffold-l50
+                               - assmstats-scaffold-n50
+                               - assmstats-total-number-of-chromosomes
+                               - assmstats-total-sequence-len
+                               - assmstats-total-ungapped-len
+                               - checkm-completeness
+                               - checkm-completeness-percentile
+                               - checkm-contamination
+                               - checkm-marker-set
+                               - checkm-marker-set-rank
+                               - checkm-species-tax-id
+                               - checkm-version
+                               - current-accession
+                               - organelle-bioproject-accessions
+                               - organelle-description
+                               - organelle-infraspecific-name
+                               - organelle-submitter
+                               - organelle-total-seq-length
+                               - organism-common-name
+                               - organism-infraspecific-breed
+                               - organism-infraspecific-cultivar
+                               - organism-infraspecific-ecotype
+                               - organism-infraspecific-isolate
+                               - organism-infraspecific-sex
+                               - organism-infraspecific-strain
+                               - organism-name
+                               - organism-pangolin
+                               - organism-tax-id
+                               - source_database
+                               - type_material-display_text
+                               - type_material-label
+                               - wgs-contigs-url
+                               - wgs-project-accession
+                               - wgs-url
+  -h, --help               help for genome
+      --inputfile string   Input file
+      --package string     Data package (zip archive), inputfile parameter is relative to the root path inside the archive
+
+
+
+Global Flags
+      --elide-header   Do not output header
+      --force          Force dataformat to run without type check prompt
+
